@@ -1,0 +1,32 @@
+﻿
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\app\globals.css =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\app\layout.tsx =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\app\page.tsx =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\components\MatchList.tsx =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\components\MatchViewer.tsx =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\lib\firebase.ts =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\lib\statsCalculator.ts =====
+
+
+
+===== FILE: C:\Users\Omkar\Desktop\Firstprinciples\cricket_app_vgct\vcl_mvp\cricket-viewer\src\types\index.ts =====
+

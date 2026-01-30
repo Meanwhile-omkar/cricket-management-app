@@ -1,0 +1,58 @@
+[
+  {
+    "team_id": "d2d_champions",
+    "name": "D2D Champions",
+    "short_name": "D2D",
+    "owner_name": "Aniket Jaitapkar",
+    "logo_path": "/assets/teams/d2d_champions.png"
+  },
+  {
+    "team_id": "dhurandhar_eleven",
+    "name": "Dhurandhar Eleven",
+    "short_name": "DE",
+    "owner_name": "Anvay / Ankit Kolvankar",
+    "logo_path": "/assets/teams/dhurandhar_eleven.png"
+  },
+  {
+    "team_id": "digital_warriors",
+    "name": "Digital Warriors",
+    "short_name": "DW",
+    "owner_name": "Pramod Choche",
+    "logo_path": "/assets/teams/digital_warriors.png"
+  },
+  {
+    "team_id": "fire_birds",
+    "name": "Fire Birds",
+    "short_name": "FB",
+    "owner_name": "Anand Kolvankar",
+    "logo_path": "/assets/teams/fire_birds.png"
+  },
+  {
+    "team_id": "rising_squad",
+    "name": "Rising Squad",
+    "short_name": "RS",
+    "owner_name": "Viraj Redij",
+    "logo_path": "/assets/teams/rising_squad.png"
+  },
+  {
+    "team_id": "shree_challengers",
+    "name": "Shree Challengers",
+    "short_name": "SC",
+    "owner_name": "Manoj Angre",
+    "logo_path": "/assets/teams/shree_challengers.png"
+  },
+  {
+    "team_id": "dominators_11",
+    "name": "The Dominators 11",
+    "short_name": "DOM",
+    "owner_name": "Sachin Hariyan",
+    "logo_path": "/assets/teams/dominators_11.png"
+  },
+  {
+    "team_id": "shree_ganesh_krupa_fighters",
+    "name": "Shree Ganesh Krupa – Fighters",
+    "short_name": "SGKF",
+    "owner_name": "Omkar Sansare",
+    "logo_path": "/assets/teams/shree_ganesh_krupa_fighters.png"
+  }
+]

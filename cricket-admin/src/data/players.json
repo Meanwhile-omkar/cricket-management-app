@@ -1,0 +1,720 @@
+[
+  {
+    "player_id": "omkar_hariyan",
+    "name": "Omkar Hariyan",
+    "team_id": "d2d_champions",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/omkar_hariyan.png"
+  },
+  {
+    "player_id": "mayank_gangan",
+    "name": "Mayank Gangan",
+    "team_id": "d2d_champions",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/mayank_gangan.png"
+  },
+  {
+    "player_id": "siddhesh_kamerkar",
+    "name": "Siddhesh Kamerkar",
+    "team_id": "d2d_champions",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/siddhesh_kamerkar.png"
+  },
+  {
+    "player_id": "shubham_bhise",
+    "name": "Shubham Bhise",
+    "team_id": "d2d_champions",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/shubham_bhise.png"
+  },
+  {
+    "player_id": "mahesh_nanche",
+    "name": "Mahesh Nanche",
+    "team_id": "d2d_champions",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/mahesh_nanche.png"
+  },
+  {
+    "player_id": "kaushal_khadye",
+    "name": "Kaushal Khadye",
+    "team_id": "d2d_champions",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/kaushal_khadye.png"
+  },
+  {
+    "player_id": "manoj_kamerkar",
+    "name": "Manoj Kamerkar",
+    "team_id": "d2d_champions",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/manoj_kamerkar.png"
+  },
+  {
+    "player_id": "pranali_nanche",
+    "name": "Pranali Nanche",
+    "team_id": "d2d_champions",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/pranali_nanche.png"
+  },
+  {
+    "player_id": "d2d_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "d2d_champions",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+
+  {
+    "player_id": "omkar_parkar",
+    "name": "Omkar Parkar",
+    "team_id": "dhurandhar_eleven",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/omkar_parkar.png"
+  },
+  {
+    "player_id": "chandrakant_khadye",
+    "name": "Chandrakant Khadye",
+    "team_id": "dhurandhar_eleven",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/chandrakant_khadye.png"
+  },
+  {
+    "player_id": "mangesh_pathare",
+    "name": "Mangesh Pathare",
+    "team_id": "dhurandhar_eleven",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/mangesh_pathare.png"
+  },
+  {
+    "player_id": "sagar_jagushte",
+    "name": "Sagar Jagushte",
+    "team_id": "dhurandhar_eleven",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sagar_jagushte.png"
+  },
+  {
+    "player_id": "deepak_khedekar",
+    "name": "Deepak Khedekar",
+    "team_id": "dhurandhar_eleven",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/deepak_khedekar.png"
+  },
+  {
+    "player_id": "sarthak_morajkar",
+    "name": "Sarthak Morajkar",
+    "team_id": "dhurandhar_eleven",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sarthak_morajkar.png"
+  },
+  {
+    "player_id": "ashok_tamhanakar",
+    "name": "Ashok Tamhanakar",
+    "team_id": "dhurandhar_eleven",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/ashok_tamhanakar.png"
+  },
+  {
+    "player_id": "purnima_devalekar",
+    "name": "Purnima Devalekar",
+    "team_id": "dhurandhar_eleven",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/purnima_devalekar.png"
+  },
+  {
+    "player_id": "lina_munj",
+    "name": "Lina Munj",
+    "team_id": "dhurandhar_eleven",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/lina_munj.png"
+  },
+
+  {
+    "player_id": "harsh_jathar",
+    "name": "Harsh Jathar",
+    "team_id": "digital_warriors",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/harsh_jathar.png"
+  },
+  {
+    "player_id": "shraddhanand_narakar",
+    "name": "Shraddhanand Narakar",
+    "team_id": "digital_warriors",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/shraddhanand_narakar.png"
+  },
+  {
+    "player_id": "amey_kudtarkar",
+    "name": "Amey Kudtarkar",
+    "team_id": "digital_warriors",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/amey_kudtarkar.png"
+  },
+  {
+    "player_id": "santosh_bhalekar",
+    "name": "Santosh Bhalekar",
+    "team_id": "digital_warriors",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/santosh_bhalekar.png"
+  },
+  {
+    "player_id": "sairaj_nanche",
+    "name": "Sairaj Nanche",
+    "team_id": "digital_warriors",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sairaj_nanche.png"
+  },
+  {
+    "player_id": "tushar_taishettye",
+    "name": "Tushar Taishettye",
+    "team_id": "digital_warriors",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/tushar_taishettye.png"
+  },
+  {
+    "player_id": "pranit_kolvankar",
+    "name": "Pranit Kolvankar",
+    "team_id": "digital_warriors",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/pranit_kolvankar.png"
+  },
+  {
+    "player_id": "siddhi_redij_morajkar",
+    "name": "Siddhi Redij-Morajkar",
+    "team_id": "digital_warriors",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/siddhi_redij_morajkar.png"
+  },
+  {
+    "player_id": "rashmi_tamboli",
+    "name": "Rashmi Tamboli",
+    "team_id": "digital_warriors",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/rashmi_tamboli.png"
+  },
+
+  {
+    "player_id": "haresh_bhalekar",
+    "name": "Haresh Bhalekar",
+    "team_id": "fire_birds",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/haresh_bhalekar.png"
+  },
+  {
+    "player_id": "ajit_lad",
+    "name": "Ajit Lad",
+    "team_id": "fire_birds",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/ajit_lad.png"
+  },
+  {
+    "player_id": "ankur_gandhi",
+    "name": "Ankur Gandhi",
+    "team_id": "fire_birds",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/ankur_gandhi.png"
+  },
+  {
+    "player_id": "nitin_pansare",
+    "name": "Nitin Pansare",
+    "team_id": "fire_birds",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/nitin_pansare.png"
+  },
+  {
+    "player_id": "amol_khetal",
+    "name": "Amol Khetal",
+    "team_id": "fire_birds",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/amol_khetal.png"
+  },
+  {
+    "player_id": "shailesh_dali",
+    "name": "Shailesh Dali",
+    "team_id": "fire_birds",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/shailesh_dali.png"
+  },
+  {
+    "player_id": "vinod_gangan",
+    "name": "Vinod Gangan",
+    "team_id": "fire_birds",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/vinod_gangan.png"
+  },
+  {
+    "player_id": "siddhika_mahadeshwar",
+    "name": "Siddhika Mahadeshwar",
+    "team_id": "fire_birds",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/siddhika_mahadeshwar.png"
+  },
+  {
+    "player_id": "fire_birds_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "fire_birds",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+
+  {
+    "player_id": "prathamesh_mahadeshwar",
+    "name": "Prathamesh Mahadeshwar",
+    "team_id": "rising_squad",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/prathamesh_mahadeshwar.png"
+  },
+  {
+    "player_id": "gauresh_alve",
+    "name": "Gauresh Alve",
+    "team_id": "rising_squad",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/gauresh_alve.png"
+  },
+  {
+    "player_id": "ninad_mahadeshwar",
+    "name": "Ninad Mahadeshwar",
+    "team_id": "rising_squad",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/ninad_mahadeshwar.png"
+  },
+  {
+    "player_id": "chinmay_devalekar",
+    "name": "Chinmay Devalekar",
+    "team_id": "rising_squad",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/chinmay_devalekar.png"
+  },
+  {
+    "player_id": "om_angre",
+    "name": "Om Angre",
+    "team_id": "rising_squad",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/om_angre.png"
+  },
+  {
+    "player_id": "sanket_shettye",
+    "name": "Sanket Shettye",
+    "team_id": "rising_squad",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sanket_shettye.png"
+  },
+  {
+    "player_id": "patne_kamerkar",
+    "name": "Patne / Kamerkar",
+    "team_id": "rising_squad",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/patne_kamerkar.png"
+  },
+  {
+    "player_id": "vrushali_narakar",
+    "name": "Vrushali Narakar",
+    "team_id": "rising_squad",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/vrushali_narakar.png"
+  },
+  {
+    "player_id": "rising_squad_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "rising_squad",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+
+  {
+    "player_id": "jay_kokate",
+    "name": "Jay Kokate",
+    "team_id": "shree_challengers",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/jay_kokate.png"
+  },
+  {
+    "player_id": "manoj_jagushte",
+    "name": "Manoj Jagushte",
+    "team_id": "shree_challengers",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/manoj_jagushte.png"
+  },
+  {
+    "player_id": "anuj_satavse",
+    "name": "Anuj Satavse",
+    "team_id": "shree_challengers",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/anuj_satavse.png"
+  },
+  {
+    "player_id": "prathamesh_redij",
+    "name": "Prathamesh Redij",
+    "team_id": "shree_challengers",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/prathamesh_redij.png"
+  },
+  {
+    "player_id": "vaibhav_korgaonkar",
+    "name": "Vaibhav Korgaonkar",
+    "team_id": "shree_challengers",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/vaibhav_korgaonkar.png"
+  },
+  {
+    "player_id": "rohan_jage",
+    "name": "Rohan Jage",
+    "team_id": "shree_challengers",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/rohan_jage.png"
+  },
+  {
+    "player_id": "yogesh_bhalekar",
+    "name": "Yogesh Bhalekar",
+    "team_id": "shree_challengers",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/yogesh_bhalekar.png"
+  },
+  {
+    "player_id": "shree_challengers_ladies_1",
+    "name": "Ladies Player",
+    "team_id": "shree_challengers",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": null
+  },
+  {
+    "player_id": "shree_challengers_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "shree_challengers",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+
+  {
+    "player_id": "rakesh_belnekar",
+    "name": "Rakesh Belnekar",
+    "team_id": "the_dominators_11",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/rakesh_belnekar.png"
+  },
+  {
+    "player_id": "rajendra_khadye",
+    "name": "Rajendra Khadye",
+    "team_id": "the_dominators_11",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/rajendra_khadye.png"
+  },
+  {
+    "player_id": "sandeep_bobhate",
+    "name": "Sandeep Bobhate",
+    "team_id": "the_dominators_11",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sandeep_bobhate.png"
+  },
+  {
+    "player_id": "yatin_pokale",
+    "name": "Yatin Pokale",
+    "team_id": "the_dominators_11",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/yatin_pokale.png"
+  },
+  {
+    "player_id": "madhusudan_bobhate",
+    "name": "Madhusudan Bobhate",
+    "team_id": "the_dominators_11",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/madhusudan_bobhate.png"
+  },
+  {
+    "player_id": "sanjay_bhat",
+    "name": "Sanjay Bhat",
+    "team_id": "the_dominators_11",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sanjay_bhat.png"
+  },
+  {
+    "player_id": "dattaprasad_gangan",
+    "name": "Dattaprasad Gangan",
+    "team_id": "the_dominators_11",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/dattaprasad_gangan.png"
+  },
+  {
+    "player_id": "prachi_pokale",
+    "name": "Prachi Pokale",
+    "team_id": "the_dominators_11",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/prachi_pokale.png"
+  },
+  {
+    "player_id": "the_dominators_11_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "the_dominators_11",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+
+  {
+    "player_id": "omkar_sansare",
+    "name": "Omkar Sansare",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": true,
+    "is_reserve": false,
+    "photo_path": "/assets/players/omkar_sansare.png"
+  },
+  {
+    "player_id": "rahul_shettye",
+    "name": "Rahul Shettye",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/rahul_shettye.png"
+  },
+  {
+    "player_id": "shamkant_khatu",
+    "name": "Shamkant Khatu",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BOWLER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/shamkant_khatu.png"
+  },
+  {
+    "player_id": "sushil_khedekar",
+    "name": "Sushil Khedekar",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/sushil_khedekar.png"
+  },
+  {
+    "player_id": "omkar_redij",
+    "name": "Omkar Redij",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "ALL_ROUNDER",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": "/assets/players/omkar_redij.png"
+  },
+  {
+    "player_id": "rahul_unknown",
+    "name": "Rahul",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BATSMAN",
+    "gender": "MALE",
+    "is_main_player": false,
+    "is_reserve": false,
+    "photo_path": null
+  },
+  {
+    "player_id": "shree_ganesh_krupa_fighters_ladies_reserve_1",
+    "name": "Reserve (Ladies)",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  },
+  {
+    "player_id": "shree_ganesh_krupa_fighters_ladies_reserve_2",
+    "name": "Reserve (Ladies)",
+    "team_id": "shree_ganesh_krupa_fighters",
+    "role": "BATSMAN",
+    "gender": "FEMALE",
+    "is_main_player": false,
+    "is_reserve": true,
+    "photo_path": null
+  }
+
+]
