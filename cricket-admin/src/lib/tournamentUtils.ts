@@ -20,32 +20,65 @@ export function generateGroupFixtures(groupTeams: string[], groupName: "A" | "B"
 }
 
 export function calculateStandings(
-  teamIds: string[], 
-  fixtures: TournamentFixture[], 
+  teamIds: string[],
+  fixtures: TournamentFixture[],
   matches: Record<string, MatchData>
 ): GroupStandings[] {
   const standings: Record<string, GroupStandings> = {};
 
-  // Initialize
+  // Initialize with NRR tracking data
+  const nrrData: Record<string, { runsScored: number; oversFaced: number; runsConceded: number; oversBowled: number }> = {};
+
   teamIds.forEach(tid => {
     standings[tid] = { team_id: tid, played: 0, won: 0, lost: 0, tied: 0, points: 0, nrr: 0 };
+    nrrData[tid] = { runsScored: 0, oversFaced: 0, runsConceded: 0, oversBowled: 0 };
   });
 
   fixtures.forEach(fixture => {
     if (fixture.status === "COMPLETED" && fixture.matchId && matches[fixture.matchId]) {
       const match = matches[fixture.matchId];
       const result = match.meta.matchResultType;
-      const winner = match.meta.winningTeam; 
-      
-      // Note: Match meta stores Team Name, but we need Team ID. 
-      // We assume mapping handles this or we rely on fixture team IDs.
-      // For simplicity, we compare names or use the fixture result logic.
-      
+      const winner = match.meta.winningTeam;
+
       const teamA = fixture.teamA_id;
       const teamB = fixture.teamB_id;
 
       if (standings[teamA]) standings[teamA].played++;
       if (standings[teamB]) standings[teamB].played++;
+
+      // Calculate NRR data from innings
+      if (match.innings1 && match.innings2) {
+        const innings1Team = match.innings1.battingTeam === match.meta.teamA ? teamA : teamB;
+        const innings2Team = innings1Team === teamA ? teamB : teamA;
+
+        // Convert overs to decimal (e.g., "2.3" means 2 overs + 3 balls = 2.5 overs)
+        const overs1 = match.innings1.oversBowled + (match.innings1.ballsInCurrentOver / 6);
+        const overs2 = match.innings2.oversBowled + (match.innings2.ballsInCurrentOver / 6);
+
+        // Update NRR data for innings 1 batting team
+        if (nrrData[innings1Team]) {
+          nrrData[innings1Team].runsScored += match.innings1.totalRuns;
+          nrrData[innings1Team].oversFaced += overs1;
+        }
+
+        // Update NRR data for innings 2 batting team
+        if (nrrData[innings2Team]) {
+          nrrData[innings2Team].runsScored += match.innings2.totalRuns;
+          nrrData[innings2Team].oversFaced += overs2;
+        }
+
+        // Update runs conceded data (innings 1 team bowled in innings 2)
+        if (nrrData[innings1Team]) {
+          nrrData[innings1Team].runsConceded += match.innings2.totalRuns;
+          nrrData[innings1Team].oversBowled += overs2;
+        }
+
+        // Update runs conceded data (innings 2 team bowled in innings 1)
+        if (nrrData[innings2Team]) {
+          nrrData[innings2Team].runsConceded += match.innings1.totalRuns;
+          nrrData[innings2Team].oversBowled += overs1;
+        }
+      }
 
       if (result === "tie" || result === "no_result") {
         standings[teamA].points += 1;
@@ -53,9 +86,8 @@ export function calculateStandings(
         standings[teamB].points += 1;
         standings[teamB].tied++;
       } else if (winner) {
-         // This is a bit tricky since match meta has names, not IDs. 
-         // In the new module, we ensure match meta team names match the JSON names exactly.
-         const winnerId = winner === match.meta.teamA ? teamA : teamB; // Rough heuristic, usually correct if we pass names correctly
+         // Determine winner ID by comparing winner name with team names
+         const winnerId = winner === match.meta.teamA ? teamA : teamB;
          const loserId = winnerId === teamA ? teamB : teamA;
 
          if (standings[winnerId]) {
@@ -69,5 +101,19 @@ export function calculateStandings(
     }
   });
 
-  return Object.values(standings).sort((a, b) => b.points - a.points); // Sort by points
+  // Calculate final NRR for each team
+  teamIds.forEach(tid => {
+    const data = nrrData[tid];
+    if (data.oversFaced > 0 && data.oversBowled > 0) {
+      const runRate = data.runsScored / data.oversFaced;
+      const concededRate = data.runsConceded / data.oversBowled;
+      standings[tid].nrr = runRate - concededRate;
+    }
+  });
+
+  // Sort by points first, then by NRR
+  return Object.values(standings).sort((a, b) => {
+    if (b.points !== a.points) return b.points - a.points;
+    return b.nrr - a.nrr;
+  });
 }

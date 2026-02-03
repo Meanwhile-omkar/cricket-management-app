@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import { db } from "@/lib/firebase";
 import { MatchData } from "@/types";
+import Link from "next/link"; // Added for better navigation performance
 
 interface MatchWithId extends MatchData {
   matchId: string;
@@ -14,7 +15,7 @@ interface Props {
   onViewTournament: () => void;
 }
 
-export default function MatchList({ onSelectMatch,onViewTournament  }: Props) {
+export default function MatchList({ onSelectMatch, onViewTournament }: Props) {
   const [matches, setMatches] = useState<MatchWithId[]>([]);
   const [filter, setFilter] = useState<"all" | "live" | "completed">("live");
 
@@ -51,53 +52,99 @@ export default function MatchList({ onSelectMatch,onViewTournament  }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      {/* Header */}
-      <div className="bg-white border-b shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="text-center">
-            <div className="text-5xl mb-3">🏏</div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Live Cricket Matches</h1>
+    <div className="min-h-screen bg-slate-50">
+      {/* --- Premium Hero Header --- */}
+      <div className="relative bg-slate-900 border-b border-slate-800 shadow-xl overflow-hidden">
+        
+        {/* Decorative Background Elements (Glow effects) */}
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-600/20 blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-purple-600/10 blur-3xl pointer-events-none"></div>
 
-            {/* 2. ADD TOURNAMENT BUTTON HERE */}
-            <div className="mt-4 mb-2">
-              <button
-                onClick={onViewTournament}
-                className="bg-purple-700 text-white px-8 py-2 rounded-full font-bold shadow-md hover:bg-purple-800 transition-colors flex items-center mx-auto gap-2"
-              >
-                <span>🏆</span> View VCL 2026 Standings
-              </button>
+        <div className="max-w-7xl mx-auto px-4 py-8 relative z-10">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            
+            {/* Left Side: Branding & Title */}
+            <div className="text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-3">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                <span className="text-xs font-semibold tracking-wider text-slate-300 uppercase">Live Action</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                VCL <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">2026</span>
+              </h1>
+              <p className="text-slate-400 mt-1 text-lg font-medium">Live Cricket Match Center</p>
             </div>
 
-            <p className="text-gray-600">Select a match to watch live scores</p>
+            {/* Right Side: Action Buttons (Glassmorphism) */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              
+              {/* Tournament Standings Button - Primary/Gold Accent */}
+              <button
+                onClick={onViewTournament}
+                className="group relative px-6 py-3 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 text-white font-bold shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-white/20 group-hover:bg-transparent transition-colors"></div>
+                <div className="relative flex items-center justify-center gap-2">
+                  <span className="text-lg">🏆</span>
+                  <span>View Standings</span>
+                </div>
+              </button>
+
+              {/* Teams Button - Secondary/Glass Style */}
+              <Link
+                href="/teams"
+                className="group px-6 py-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700 text-slate-200 font-semibold backdrop-blur-md transition-all duration-300 hover:text-white hover:border-slate-500 w-full sm:w-auto flex items-center justify-center gap-2"
+              >
+                <span className="group-hover:scale-110 transition-transform duration-300">👥</span>
+                <span>View Teams</span>
+              </Link>
+
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Filter Tabs */}
-      <div className="bg-white border-b">
+      {/* --- Filter Tabs --- */}
+      <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-center space-x-4 py-4">
+          <div className="flex justify-center space-x-2 md:space-x-4 py-4">
             <button
               onClick={() => setFilter("all")}
-              className={`px-6 py-2 rounded-lg font-medium transition ${
-                filter === "all" ? "bg-blue-600 text-white" : "bg-white text-gray-700 border hover:bg-gray-50"
+              className={`px-4 md:px-6 py-2 rounded-lg font-medium text-sm md:text-base transition ${
+                filter === "all" ? "bg-slate-900 text-white" : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               }`}
             >
               All Matches
             </button>
             <button
               onClick={() => setFilter("live")}
-              className={`px-6 py-2 rounded-lg font-medium transition ${
-                filter === "live" ? "bg-green-600 text-white" : "bg-white text-gray-700 border hover:bg-gray-50"
-              }`}
+              className={`
+                px-5 py-2
+                rounded-full
+                font-medium text-sm md:text-base
+                flex items-center gap-2
+                shadow-md transition-all duration-300
+                ${filter === "live" 
+                  ? "bg-green-500 text-white hover:shadow-lg" 
+                  : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                }
+              `}
             >
-              🔴 Live
+              {filter === "live" && (
+                <span className="h-2 w-2 rounded-full bg-white animate-pulse"></span>
+              )}
+              Live
             </button>
+
+
             <button
               onClick={() => setFilter("completed")}
-              className={`px-6 py-2 rounded-lg font-medium transition ${
-                filter === "completed" ? "bg-blue-600 text-white" : "bg-white text-gray-700 border hover:bg-gray-50"
+              className={`px-4 md:px-6 py-2 rounded-lg font-medium text-sm md:text-base transition ${
+                filter === "completed" ? "bg-slate-900 text-white" : "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900"
               }`}
             >
               Completed
@@ -106,14 +153,14 @@ export default function MatchList({ onSelectMatch,onViewTournament  }: Props) {
         </div>
       </div>
 
-      {/* Match Cards */}
+      {/* --- Match Cards --- */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         {filteredMatches.length === 0 ? (
-          <div className="bg-white rounded-xl p-16 text-center shadow-lg">
-            <div className="text-6xl mb-4">🏏</div>
+          <div className="bg-white rounded-xl p-16 text-center shadow-lg border border-slate-100">
+            <div className="text-6xl mb-4 grayscale opacity-50">🏏</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">No matches found</h3>
-            <p className="text-gray-600">
-              {filter === "live" ? "No live matches at the moment" : "No completed matches yet"}
+            <p className="text-gray-500">
+              {filter === "live" ? "No live action at the moment" : "No completed matches yet"}
             </p>
           </div>
         ) : (
@@ -122,50 +169,60 @@ export default function MatchList({ onSelectMatch,onViewTournament  }: Props) {
               <div
                 key={match.matchId}
                 onClick={() => onSelectMatch(match.matchId)}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition cursor-pointer border-2 border-transparent hover:border-blue-500"
+                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer border border-slate-100 hover:border-blue-500/30 relative overflow-hidden"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <h3 className="font-bold text-lg text-gray-900 mb-1">
-                      {match.meta.teamA} vs {match.meta.teamB}
-                    </h3>
-                    <p className="text-sm text-gray-500">{match.meta.oversPerInnings} overs per innings</p>
-                  </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${getStatusBadge(match.meta.status)}`}>
-                    {match.meta.status.replace("_", " ")}
-                  </span>
-                </div>
+                 {/* Card Hover Gradient Effect */}
+                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-blue-50/0 group-hover:to-blue-50/50 transition-all duration-300"></div>
 
-                {match.meta.status !== "NOT_STARTED" && (
-                  <div className="mb-4">
-                    <div className="text-4xl font-black text-gray-900 mb-1">
-                      {match.state.totalRuns}/{match.state.totalWickets}
+                <div className="relative z-10">
+                    <div className="flex justify-between items-start mb-5">
+                    <div className="flex-1">
+                        <h3 className="font-bold text-lg text-slate-800 mb-1 leading-tight">
+                        {match.meta.teamA} <span className="text-slate-300 font-light">vs</span> {match.meta.teamB}
+                        </h3>
+                        <p className="text-xs font-semibold text-slate-400 uppercase tracking-wide">{match.meta.oversPerInnings} overs match</p>
                     </div>
-                    <div className="text-sm text-gray-600">
-                      {match.state.oversBowled}.{match.state.ballsInCurrentOver} / {match.meta.oversPerInnings} overs
-                      {match.meta.innings === 2 && <span className="ml-2">• Innings {match.meta.innings}</span>}
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase ${getStatusBadge(match.meta.status)}`}>
+                        {match.meta.status.replace("_", " ")}
+                    </span>
                     </div>
 
-                    {match.meta.innings === 2 && match.meta.targetScore && (
-                      <div className="mt-2 p-2 bg-green-50 rounded-lg border border-green-200">
-                        <p className="text-sm font-semibold text-green-800">
-                          Target: {match.meta.targetScore} • Need {match.meta.targetScore - match.state.totalRuns} runs
-                        </p>
-                      </div>
+                    {match.meta.status !== "NOT_STARTED" && (
+                    <div className="mb-5">
+                        <div className="text-5xl font-black text-slate-900 mb-1 tracking-tighter">
+                        {match.state.totalRuns}<span className="text-3xl text-slate-400 font-bold">/{match.state.totalWickets}</span>
+                        </div>
+                        <div className="text-sm font-medium text-slate-500 flex items-center gap-2">
+                            <span>Ov: {match.state.oversBowled}.{match.state.ballsInCurrentOver}</span>
+                            <span className="text-slate-300">|</span>
+                            {match.meta.innings === 2 && <span className="text-blue-600 font-bold">Innings 2</span>}
+                        </div>
+
+                        {match.meta.innings === 2 && match.meta.targetScore && match.meta.status !== "COMPLETED" && (
+                        <div className="mt-4 p-3 bg-green-50 rounded-xl border border-green-100 flex items-center gap-3">
+                            <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <p className="text-sm font-bold text-green-800">
+                            Target: {match.meta.targetScore} <span className="mx-1 opacity-50">•</span> Need {match.meta.targetScore - match.state.totalRuns} runs
+                            </p>
+                        </div>
+                        )}
+                    </div>
                     )}
-                  </div>
-                )}
 
-                {match.meta.status === "COMPLETED" && match.meta.matchResult && (
-                  <div className="mb-4 p-4 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border-2 border-yellow-300">
-                    <p className="text-sm font-bold text-yellow-900 text-center">{match.meta.matchResult}</p>
-                  </div>
-                )}
+                    {match.meta.status === "COMPLETED" && match.meta.matchResult && (
+                    <div className="mb-4 p-3 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-amber-200">
+                        <p className="text-sm font-bold text-amber-900 text-center flex items-center justify-center gap-2">
+                            <span>🎉</span> {match.meta.matchResult}
+                        </p>
+                    </div>
+                    )}
 
-                <div className="pt-4 border-t">
-                  <button className="w-full text-blue-600 hover:text-blue-700 font-semibold text-sm">
-                    {match.meta.status === "LIVE" || match.meta.status === "INNINGS_BREAK" ? "Watch Live →" : "View Scorecard →"}
-                  </button>
+                    <div className="pt-4 border-t border-slate-100 flex justify-end">
+                    <button className="text-blue-600 group-hover:text-blue-700 font-bold text-sm flex items-center gap-1 transition-colors">
+                        {match.meta.status === "LIVE" || match.meta.status === "INNINGS_BREAK" ? "Watch Live" : "Scorecard"} 
+                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </button>
+                    </div>
                 </div>
               </div>
             ))}

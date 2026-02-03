@@ -96,7 +96,7 @@ export default function CreateMatch({ adminId, adminUsername, onMatchCreated }: 
           <div>
             <label className="block text-sm font-bold mb-2 text-gray-700">Team A Name (Batting First)</label>
             <input
-              className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               value={teamA}
               onChange={e => setTeamA(e.target.value)}
               placeholder="e.g. India"
@@ -106,7 +106,7 @@ export default function CreateMatch({ adminId, adminUsername, onMatchCreated }: 
           <div>
             <label className="block text-sm font-bold mb-2 text-gray-700">Team B Name (Bowling First)</label>
             <input
-              className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
               value={teamB}
               onChange={e => setTeamB(e.target.value)}
               placeholder="e.g. Australia"
@@ -117,7 +117,7 @@ export default function CreateMatch({ adminId, adminUsername, onMatchCreated }: 
         <div>
           <label className="block text-sm font-bold mb-2 text-gray-700">Team A Squad</label>
           <textarea
-            className="w-full border border-gray-300 p-3 rounded-lg h-32 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full border border-gray-300 p-3 rounded-lg h-32 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="Enter player names, one per line"
             value={rosterA}
             onChange={e => setRosterA(e.target.value)}
@@ -128,7 +128,7 @@ export default function CreateMatch({ adminId, adminUsername, onMatchCreated }: 
         <div>
           <label className="block text-sm font-bold mb-2 text-gray-700">Team B Squad</label>
           <textarea
-            className="w-full border border-gray-300 p-3 rounded-lg h-32 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full border border-gray-300 p-3 rounded-lg h-32 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             placeholder="Enter player names, one per line"
             value={rosterB}
             onChange={e => setRosterB(e.target.value)}
@@ -140,7 +140,7 @@ export default function CreateMatch({ adminId, adminUsername, onMatchCreated }: 
           <label className="block text-sm font-bold mb-2 text-gray-700">Overs Per Innings</label>
           <input
             type="number"
-            className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900"
             value={overs}
             onChange={e => setOvers(Number(e.target.value))}
             min={1}

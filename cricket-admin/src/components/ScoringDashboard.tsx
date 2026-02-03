@@ -90,7 +90,7 @@ export default function ScoringDashboard({ match, matchId }: Props) {
     }).catch(err => console.error(err));
   };
 
-  const submitBall = () => {
+  const submitBall = async () => {
     if (!match || !match.state) return;
     const { state, meta } = match;
 
@@ -142,7 +142,14 @@ export default function ScoringDashboard({ match, matchId }: Props) {
 
     // If innings 1 completed, save innings data
     if (result.stateChanges.inningsCompleted && meta.innings === 1) {
-      const innings1Data = saveInningsData(match, 1, [...match.balls, result.newBall]);
+      // Use updated state for saving innings data
+      const matchWithNewState = {
+        ...match,
+        state: result.newState,
+        meta: result.newMeta,
+        balls: [...match.balls, result.newBall]
+      };
+      const innings1Data = saveInningsData(matchWithNewState, 1, [...match.balls, result.newBall]);
       finalMatchData = {
         ...finalMatchData,
         innings1: innings1Data
@@ -151,7 +158,14 @@ export default function ScoringDashboard({ match, matchId }: Props) {
 
     // If innings 2 completed, calculate result
     if (result.stateChanges.inningsCompleted && meta.innings === 2 && match.innings1) {
-      const innings2Data = saveInningsData(match, 2, [...match.balls, result.newBall]);
+      // Use updated state for saving innings data
+      const matchWithNewState = {
+        ...match,
+        state: result.newState,
+        meta: result.newMeta,
+        balls: [...match.balls, result.newBall]
+      };
+      const innings2Data = saveInningsData(matchWithNewState, 2, [...match.balls, result.newBall]);
       const matchResult = calculateMatchResult(match.innings1, innings2Data);
 
       finalMatchData = {
@@ -167,7 +181,14 @@ export default function ScoringDashboard({ match, matchId }: Props) {
     }
 
     // Save to Firebase
-    set(ref(db, dbPath), finalMatchData);
+    await set(ref(db, dbPath), finalMatchData);
+
+    // If this is a tournament match and it's now completed, update the fixture status
+    const matchTyped = match as any;
+    if (finalMatchData.meta.status === "COMPLETED" && matchTyped.tournamentId && matchTyped.fixtureId) {
+      const fixtureStatusRef = ref(db, `tournaments/${matchTyped.tournamentId}/fixtures/${matchTyped.fixtureId}/status`);
+      await set(fixtureStatusRef, "COMPLETED");
+    }
 
     // Reset Form
     setRuns(0);
@@ -375,7 +396,7 @@ export default function ScoringDashboard({ match, matchId }: Props) {
             {strikerStats && (
               <div className="p-2 bg-green-50 rounded">
                 <p className="font-bold text-green-900">★ {strikerStats.name}</p>
-                <p className="text-lg font-bold">{strikerStats.runs} ({strikerStats.balls})</p>
+                <p className="text-lg font-bold text-slate-600">{strikerStats.runs} ({strikerStats.balls})</p>
                 <p className="text-xs text-gray-600">
                   4s: {strikerStats.fours} | 6s: {strikerStats.sixes} | SR: {strikerStats.strikeRate.toFixed(0)}
                 </p>
@@ -383,8 +404,8 @@ export default function ScoringDashboard({ match, matchId }: Props) {
             )}
             {nonStrikerStats && (
               <div className="p-2 bg-gray-50 rounded">
-                <p className="font-bold">{nonStrikerStats.name}</p>
-                <p className="text-lg font-bold">{nonStrikerStats.runs} ({nonStrikerStats.balls})</p>
+                <p className="font-bold text-slate-600">{nonStrikerStats.name}</p>
+                <p className="text-lg font-bold text-slate-600">{nonStrikerStats.runs} ({nonStrikerStats.balls})</p>
                 <p className="text-xs text-gray-600">
                   4s: {nonStrikerStats.fours} | 6s: {nonStrikerStats.sixes} | SR: {nonStrikerStats.strikeRate.toFixed(0)}
                 </p>
@@ -395,7 +416,7 @@ export default function ScoringDashboard({ match, matchId }: Props) {
           {bowlerStats && (
             <div className="mt-2 p-2 bg-red-50 rounded text-sm">
               <p className="font-bold text-red-900">Bowler: {bowlerStats.name}</p>
-              <p>
+              <p className="text-xs text-gray-600">
                 {bowlerStats.overs}.{bowlerStats.balls} overs | {bowlerStats.runs} runs | {bowlerStats.wickets} wickets | Econ: {bowlerStats.economy}
               </p>
             </div>
@@ -411,7 +432,8 @@ export default function ScoringDashboard({ match, matchId }: Props) {
             <select
               value={localStriker}
               onChange={(e) => handleUpdatePlayer("striker", e.target.value)}
-              className="border p-2 rounded w-full bg-green-50"
+              className="border p-2 rounded w-full bg-green-50 text-slate-600
+"
             >
               <option value="">Select Striker *</option>
               {battingSquad.map(p => <option key={p} value={p}>{p}</option>)}
@@ -419,7 +441,7 @@ export default function ScoringDashboard({ match, matchId }: Props) {
             <select
               value={localNonStriker}
               onChange={(e) => handleUpdatePlayer("nonStriker", e.target.value)}
-              className="border p-2 rounded w-full"
+              className="border p-2 rounded w-full text-slate-600"
             >
               <option value="">Select Non-Striker *</option>
               {battingSquad.map(p => <option key={p} value={p}>{p}</option>)}
@@ -427,12 +449,12 @@ export default function ScoringDashboard({ match, matchId }: Props) {
           </div>
         </div>
 
-        <div className="bg-white p-4 rounded-lg shadow border-l-4 border-red-500">
+        <div className="bg-white p-4 rounded-lg shadow border-l-4 border-red-500 text-slate-600">
           <h3 className="text-xs font-bold text-gray-500 uppercase mb-2">Bowling ({match.meta.bowlingTeam})</h3>
           <select
             value={localBowler}
             onChange={(e) => handleUpdatePlayer("bowler", e.target.value)}
-            className="border p-2 rounded w-full bg-red-50"
+            className="border p-2 rounded w-full bg-red-50 text-slate-600"
           >
             <option value="">Select Bowler *</option>
             {bowlingSquad.map(p => <option key={p} value={p}>{p}</option>)}

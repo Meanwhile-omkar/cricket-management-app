@@ -1,0 +1,134 @@
+[
+  {
+    "id": "d2d-champions",
+    "name": "D2D Champions",
+    "logo": "/images/teams/d2d-champions.png",
+    "players": [
+      { "name": "Aniket Jaitapkar", "role": "Owner", "image": "/images/players/aniket-jaitapkar.jpg" },
+      { "name": "Omkar Haryan", "role": "Player", "image": "/images/players/omkar-haryan.jpg" },
+      { "name": "Mayank Gangan", "role": "Player", "image": "/images/players/mayank-gangan.jpg" },
+      { "name": "Siddhesh Kamerkar", "role": "Player", "image": "/images/players/siddhesh-kamerkar.jpg" },
+      { "name": "Shubham Bhise", "role": "Player", "image": "/images/players/shubham-bhise.jpg" },
+      { "name": "Mahesh Nanche", "role": "Player", "image": "/images/players/mahesh-nanche.jpg" },
+      { "name": "Kaushal Khadye", "role": "Player", "image": "/images/players/kaushal-khadye.jpg" },
+      { "name": "Manoj Kamerkar", "role": "Player", "image": "/images/players/manoj-kamerkar.jpg" },
+      { "name": "Pranali Nanche", "role": "Player", "image": "/images/players/pranali-nanche.jpg" }
+    ]
+  },
+  {
+    "id": "dhurandhar-eleven",
+    "name": "Dhurandhar Eleven",
+    "logo": "/images/teams/dhurandhar-eleven.jpeg",
+    "players": [
+      { "name": "Ankit Kolvankar", "role": "Owner", "image": "/images/players/ankit-kolvankar.jpg" },
+      { "name": "Omkar Parkar", "role": "Player", "image": "/images/players/omkar-parkar.jpg" },
+      { "name": "Chandrakant Khadye", "role": "Player", "image": "/images/players/chandrakant-khadye.jpg" },
+      { "name": "Mangesh Pathare", "role": "Player", "image": "/images/players/mangesh-pathare.jpg" },
+      { "name": "Sagar Jagushte", "role": "Player", "image": "/images/players/sagar-jagushte.jpg" },
+      { "name": "Deepak Khedekar", "role": "Player", "image": "/images/players/deepak-khedekar.jpg" },
+      { "name": "Sarthak Morjkar", "role": "Player", "image": "/images/players/sarthak-morjkar.jpg" },
+      { "name": "Ashok Tamhnkar", "role": "Player", "image": "/images/players/ashok-tamhnkar.jpg" },
+      { "name": "Purnima Devlekar", "role": "Player", "image": "/images/players/purnima-devlekar.jpg" }
+    ]
+  },
+  {
+    "id": "digital-warriors",
+    "name": "Digital Warriors",
+    "logo": "/images/teams/digital-warriors.png",
+    "players": [
+      { "name": "Pramod Choche", "role": "Owner", "image": "/images/players/pramod-choche.jpg" },
+      { "name": "Harsh Jathar", "role": "Player", "image": "/images/players/harsh-jathar.jpg" },
+      { "name": "Shraddhanand Narakar", "role": "Player", "image": "/images/players/shraddhanand-narakar.jpg" },
+      { "name": "Amey Kudtarkar", "role": "Player", "image": "/images/players/amey-kudtarkar.jpg" },
+      { "name": "Santosh Bhalekar", "role": "Player", "image": "/images/players/santosh-bhalekar.jpg" },
+      { "name": "Sairaj Nanche", "role": "Player", "image": "/images/players/sairaj-nanche.jpg" },
+      { "name": "Tushar Taishettye", "role": "Player", "image": "/images/players/tushar-taishettye.jpg" },
+      { "name": "Pranit Kolvankar", "role": "Player", "image": "/images/players/pranit-kolvankar.jpg" },
+      { "name": "Siddhi Redij-Morjkar", "role": "Player", "image": "/images/players/siddhi-redij-morjkar.jpg" }
+    ]
+  },
+  {
+    "id": "fire-birds",
+    "name": "Fire Birds",
+    "logo": "/images/teams/fire-birds.jpeg",
+    "players": [
+      { "name": "Anand Kolvankar", "role": "Owner", "image": "/images/players/anand-kolvankar.jpg" },
+      { "name": "Haresh Bhalekar", "role": "Player", "image": "/images/players/haresh-bhalekar.jpg" },
+      { "name": "Ajit Lad", "role": "Player", "image": "/images/players/ajit-lad.jpg" },
+      { "name": "Ankur Gandhi", "role": "Player", "image": "/images/players/ankur-gandhi.jpg" },
+      { "name": "Nitin Pansare", "role": "Player", "image": "/images/players/nitin-pansare.jpg" },
+      { "name": "Amol Khetal", "role": "Player", "image": "/images/players/amol-khetal.jpg" },
+      { "name": "Shailesh Dali", "role": "Player", "image": "/images/players/shailesh-dali.jpg" },
+      { "name": "Vinod Gangan", "role": "Player", "image": "/images/players/vinod-gangan.jpg" },
+      { "name": "Dr. Siddhika Mahadeshwar", "role": "Player", "image": "/images/players/siddhika-mahadeshwar.jpg" },
+      { "name": "Swagata Haryan", "role": "Player", "image": "/images/players/swagata-haryan.jpg" }
+    ]
+  },
+  {
+    "id": "rising-squad",
+    "name": "Rising Squad",
+    "logo": "/images/teams/rising-squad.png",
+    "players": [
+      { "name": "Viraj Redij", "role": "Owner", "image": "/images/players/viraj-redij.jpg" },
+      { "name": "Prathamesh Mahadeshwar", "role": "Player", "image": "/images/players/prathamesh-mahadeshwar.jpg" },
+      { "name": "Rajesh Mapuskar", "role": "Player", "image": "/images/players/rajesh-mapuskar.jpg" },
+      { "name": "Ninad Mahadeshwar", "role": "Player", "image": "/images/players/ninad-mahadeshwar.jpg" },
+      { "name": "Chinmay Devlekar", "role": "Player", "image": "/images/players/chinmay-devlekar.jpg" },
+      { "name": "Om Angre", "role": "Player", "image": "/images/players/om-angre.jpg" },
+      { "name": "Sanket Shettye", "role": "Player", "image": "/images/players/sanket-shettye.jpg" },
+      { "name": "Santosh Kamerkar", "role": "Player", "image": "/images/players/santosh-kamerkar.jpg" },
+      { "name": "Vrushali Narakar", "role": "Player", "image": "/images/players/vrushali-narakar.jpg" }
+    ]
+  },
+  {
+    "id": "shree-challengers",
+    "name": "Shree Challengers",
+    "logo": "/images/teams/shree-challengers.png",
+    "players": [
+      { "name": "Manoj Angre", "role": "Owner", "image": "/images/players/manoj-angre.jpg" },
+      { "name": "Jay Kokate", "role": "Player", "image": "/images/players/jay-kokate.jpg" },
+      { "name": "Manoj Jagushte", "role": "Player", "image": "/images/players/manoj-jagushte.jpg" },
+      { "name": "Anuj Satavse", "role": "Player", "image": "/images/players/anuj-satavse.jpg" },
+      { "name": "Prathamesh Redij", "role": "Player", "image": "/images/players/prathamesh-redij.jpg" },
+      { "name": "Vaibhav Korgaonkar", "role": "Player", "image": "/images/players/vaibhav-korgaonkar.jpg" },
+      { "name": "Rohan Jage", "role": "Player", "image": "/images/players/rohan-jage.jpg" },
+      { "name": "Umesh Aalve", "role": "Player", "image": "/images/players/umesh-aalve.jpg" },
+      { "name": "Medha Dali", "role": "Player", "image": "/images/players/medha-dali.jpg" },
+      { "name": "Namrata Kolvankar", "role": "Player", "image": "/images/players/namrata-kolvankar.jpg" }
+    ]
+  },
+  {
+    "id": "the-dominators-11",
+    "name": "The Dominators 11",
+    "logo": "/images/teams/the-dominators-11.jpeg",
+    "players": [
+      { "name": "Sachin Haryan", "role": "Owner", "image": "/images/players/sachin-haryan.jpg" },
+      { "name": "Rakesh Belnekar", "role": "Player", "image": "/images/players/rakesh-belnekar.jpg" },
+      { "name": "Rajendra Khadye", "role": "Player", "image": "/images/players/rajendra-khadye.jpg" },
+      { "name": "Sandeep Bobhate", "role": "Player", "image": "/images/players/sandeep-bobhate.jpg" },
+      { "name": "Yatin Pokale", "role": "Player", "image": "/images/players/yatin-pokale.jpg" },
+      { "name": "Madhusudan Bobhate", "role": "Player", "image": "/images/players/madhusudan-bobhate.jpg" },
+      { "name": "Sanjay Bhat", "role": "Player", "image": "/images/players/sanjay-bhat.jpg" },
+      { "name": "Neel Patade", "role": "Player", "image": "/images/players/neel-patade.jpg" },
+      { "name": "Prachi Pokale", "role": "Player", "image": "/images/players/prachi-pokale.jpg" },
+      { "name": "Priya Parkar", "role": "Player", "image": "/images/players/priya-parkar.jpg" }
+    ]
+  },
+  {
+    "id": "shree-ganesh-krupa-fighter",
+    "name": "Shree Ganesh Krupa Fighter",
+    "logo": "/images/teams/shree-ganesh-krupa-fighter.png",
+    "players": [
+      { "name": "Omkar Sansare", "role": "Owner", "image": "/images/players/omkar-sansare.jpg" },
+      { "name": "Kartik Satavse", "role": "Player", "image": "/images/players/kartik-satavse.jpg" },
+      { "name": "Swaraj Gandhi", "role": "Player", "image": "/images/players/swaraj-gandhi.jpg" },
+      { "name": "Sushil Khedekar", "role": "Player", "image": "/images/players/sushil-khedekar.jpg" },
+      { "name": "Omkar Redij", "role": "Player", "image": "/images/players/omkar-redij.jpg" },
+      { "name": "Prajesh Khedekar", "role": "Player", "image": "/images/players/prajesh-khedekar.jpg" },
+      { "name": "Yogesh Hegishte", "role": "Player", "image": "/images/players/yogesh-hegishte.jpg" },
+      { "name": "Piyush Pokale", "role": "Player", "image": "/images/players/piyush-pokale.jpg" },
+      { "name": "Janhavi Helek ar", "role": "Player", "image": "/images/players/janhavi-helek-ar.jpg" },
+      { "name": "Gauresh Aalve", "role": "Player", "image": "/images/players/gauresh-aalve.jpg" }
+    ]
+  }
+]

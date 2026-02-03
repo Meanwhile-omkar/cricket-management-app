@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ref, onValue } from "firebase/database";
 import { db } from "@/lib/firebase";
 import { MatchData, Ball } from "@/types";
+import PostMatchScorecard from "./PostMatchScorecard"; 
 import {
   calculateBatsmanStats,
   calculateBowlerStats,
@@ -98,62 +99,7 @@ export default function MatchViewer({ matchId, onBack }: Props) {
 
   // Match completed display
   if (meta.status === "COMPLETED") {
-    return (
-      <main className="min-h-screen bg-slate-100">
-        <div className="bg-white border-b p-4">
-          <button onClick={onBack} className="text-blue-600 hover:text-blue-700 font-medium">
-            ← Back to Matches
-          </button>
-        </div>
-
-        <div className="max-w-2xl mx-auto p-6">
-          <div className="bg-white shadow-xl rounded-xl p-6">
-            <h2 className="text-3xl font-bold mb-6 text-center text-slate-900">Match Completed</h2>
-
-            <div className="mb-8 p-6 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-lg border-2 border-yellow-400">
-              <p className="text-center text-2xl font-bold text-yellow-900">
-                {match.meta.matchResult}
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div className="p-6 bg-blue-50 rounded-lg border border-blue-200">
-                <h3 className="font-bold text-xl mb-3 text-blue-900">{match.innings1?.battingTeam}</h3>
-                <p className="text-4xl font-bold text-blue-800 mb-2">
-                  {match.innings1?.totalRuns}/{match.innings1?.totalWickets}
-                </p>
-                <p className="text-sm text-slate-600">
-                  {match.innings1?.oversBowled}.{match.innings1?.ballsInCurrentOver} overs
-                </p>
-              </div>
-
-              <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-                <h3 className="font-bold text-xl mb-3 text-green-900">{match.innings2?.battingTeam}</h3>
-                <p className="text-4xl font-bold text-green-800 mb-2">
-                  {match.innings2?.totalRuns}/{match.innings2?.totalWickets}
-                </p>
-                <p className="text-sm text-slate-600">
-                  {match.innings2?.oversBowled}.{match.innings2?.ballsInCurrentOver} overs
-                </p>
-              </div>
-            </div>
-
-            {match.innings1 && match.innings1.fallOfWickets && match.innings1.fallOfWickets.length > 0 && (
-              <div className="mb-6">
-                <h3 className="font-bold text-lg mb-3">Fall of Wickets - {match.innings1.battingTeam}</h3>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  {match.innings1.fallOfWickets.map((fow, i) => (
-                    <div key={i} className="p-2 bg-slate-50 rounded">
-                      {fow.wicketNumber}. {fow.playerOut} ({fow.score}/{fow.wicketNumber}, {fow.oversBowled}.{fow.ballsInOver} ov)
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </main>
-    );
+    return <PostMatchScorecard match={match} onBack={onBack} />;
   }
 
   // Innings break display
