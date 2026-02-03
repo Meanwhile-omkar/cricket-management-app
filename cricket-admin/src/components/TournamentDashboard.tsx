@@ -81,7 +81,7 @@ export default function TournamentDashboard({ adminId, adminUsername, onBack }: 
       } else {
         setSetupStep(1); // Need setup
       }
-    }, (error) => {
+    }, (error: any) => {
       if (!mounted) return;
       clearTimeout(timeoutId);
       console.error("Firebase error:", error);
